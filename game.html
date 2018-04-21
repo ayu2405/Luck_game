@@ -1,0 +1,86 @@
+<html>
+<head>
+<script type="text/javascript">
+var score=0;
+var c=0;
+var arr=["Lion","Tiger","Snake","Rabbit"];
+function next()
+{
+c++;
+var i=Math.floor(Math.random()*arr.length);
+var name="";
+var gen=arr[i];
+//alert(gen);
+var radio=form.grp;
+for(var i=0;i<radio.length;i++)
+{
+if(radio[i].checked)
+{
+name=radio[i].value;
+}
+}
+//alert(name);
+if(name==gen)
+{
+score++;
+alert("You WON: Animal= "+gen+"  Score="+score);
+}
+else
+{
+alert("You LOSE: Animal = "+gen+"  Score="+score);
+}
+
+}
+
+
+</script>
+
+
+           <style>
+            h1{
+                color: black;
+                font: 70px bold,Jokerman;
+                text-align: center;
+            }
+	h2{
+                color: black;
+                font: 50px bold,Jokerman;
+                text-align: center;
+            }
+  
+           #but{
+                background-color: pink;
+                font: 20px bold,Comic Sans MS;
+                margin: 30px;
+                position: absolute;
+	left: 600px;
+                border: 2px solid black;
+                border-radius: 10px;
+                
+            }
+
+	#sel{
+              color: purple;
+                font: 30px bold,Comic Sans MS;
+                   text-align: center;
+            }
+
+        </style>
+</head>
+<body  style="background-image:url(pic.jpg)">
+<h1>Lucky Draw- Animal Game</h1>
+
+<h2>Select an animal from below and check your luck</h2>
+<form name="form" method="post">
+<div id="sel">
+<input type="radio" name="grp" value="Lion"> Lion
+<input type="radio" name="grp" value="Tiger"> Tiger
+<input type="radio" name="grp" value="Snake"> Snake
+<input type="radio" name="grp" value="Rabbit"> Rabbit
+</div>
+
+<br>
+<input type="button"  id="but" value="Check" onclick=next()>
+</form>
+</body>
+</html>
